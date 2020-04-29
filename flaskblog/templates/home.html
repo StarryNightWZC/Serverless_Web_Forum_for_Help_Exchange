@@ -1,0 +1,210 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='slider.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Merriweather+Sans:ital,wght@0,800;1,400&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+ <!-- <script type="text/javascript" src="../static/js.js"></script>-->
+  <script>
+      function reset_animation(slide,n){
+         var elm = slide;
+         var count=n
+         var newone = elm.cloneNode(true);
+         elm.parentNode.replaceChild(newone, elm);
+
+         var bars = document.getElementsByClassName("bar");
+         for(var i=0;i<bars.length;i++){
+             //bars[i].className +=" active"
+             bars[i].className = bars[i].className.replace(" active", "");
+         }
+         bars[n-1].className += " active";
+     }
+  </script>
+{% endblock %}
+
+{% block home %}
+  <div class="slidershow">
+      <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <div class="slide s1">
+              <div class="slide1 ">
+                  <div class="text-block text-animation" id="s1">
+                        <h2>HI NEIGHBOR</h2>
+                        <p>
+                              Currently, the spread of COVID-19 </br>
+                              has made our communities kick </br>
+                              into high gear in preparation for </br>
+                              supporting those most impacted </br>
+                              by the virus.</br>
+                        </p>
+                   </div>
+              </div>
+          </div>
+          <div class="slide">
+              <div class="slide2">
+                    <div class="text-block text-animation" id="s2">
+                        <h2>Building</br> Community</h2>
+                        <p>
+                              This site was set up by concerned  </br>
+                              members of the Toronto  </br>
+                              community to help share out  </br>
+                              information and resources. </br>
+
+                        </p>
+                    </div>
+              </div>
+          </div>
+          <div class="slide">
+              <div class="slide3">
+                   <div class="text-block text-animation" id="s3">
+                        <h2>Responding </br>Together</h2>
+                        <p>
+                              No matter what background you </br>
+                              have, it will take all of us to  </br>
+                              support each other during this </br>
+                              crisis, so consider offering help.</br>
+                              </br>
+                        </p>
+                   </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="navigation">
+          <label for="r1" class="bar active" id="n1" onclick="reset_animation(document.getElementById('s1'),1)"></label>
+          <label for="r2" class="bar" id="n2" onclick="reset_animation(document.getElementById('s2'),2)"></label>
+          <label for="r3" class="bar" id="n3" onclick="reset_animation(document.getElementById('s3'),3)"></label>
+      </div>
+
+  </div>
+
+  <section class="section section-light">
+    <h2>Coronavirus Grassroots Resource Network</h2>
+    <p>
+        The spread of COVID-19 has made communities kick into high gear in preparation for supporting
+        those most impacted by the virus. The goal of our website is to provide a way for our local
+        community members to request and provide support. No matter what background you have,
+        it will take all of us to support each other during this crisis, so consider offering help.
+    </p>
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
+        Community Resource Guide
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <h2>Community Resource Guide</h2>
+    <p>
+     There has been a lot of announcements and changes to regular services in the city. This guide is a grassroots attempt to bring all of this news together into one place and be regularly updated. You will find info about services related to food, housing, child care, transportation, utilities, and more.
+    </p>
+  </section>
+
+  <div class="container">
+      <div class="row align-items-center pb-5">
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/heart.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.medical') }}">Medical/Mental Health</a>
+              </div>
+              <div class="container-text">
+                  Do you have symptoms? Having trouble coping?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/medical'" >Read More</button>
+          </div>
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/food.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.food') }}">Food/Other Necessities</a>
+              </div>
+              <div class="container-text">
+                  Are you seeking food or other necessities?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/food'" >Read More</button>
+          </div>
+      </div>
+
+      <div class="row align-items-center pb-5">
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/utility.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.utility') }}">Utilities</a>
+              </div>
+              <div class="container-text">
+                  Need to contact your utility services?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/utility'" >Read More</button>
+          </div>
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/house.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.house') }}">Housing/Shelter</a>
+              </div>
+              <div class="container-text">
+                  Need a place to stay?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/house'" >Read More</button>
+          </div>
+      </div>
+
+      <div class="row align-items-center pb-5">
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/child.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.child') }}">Youth/Child Care</a>
+              </div>
+              <div class="container-text">
+                  Need someone to watch over your kids?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/child'" >Read More</button>
+          </div>
+          <div class="col-6 text-center">
+              <div style="text-align: center">
+                  <img  class="image" alt="" src="https://covid19blog.s3.amazonaws.com/logo/older.png" />
+              </div>
+              <div class='container-title' >
+                  <a class='container-title' href="{{ url_for('resource.senior') }}">Seniors</a>
+              </div>
+              <div class="container-text">
+                  Are you a senior that has any needs, questions, or concerns?
+              </div>
+              <button class="btn" onclick="location.href='/dev/resourceguide/food'" >Read More</button>
+          </div>
+      </div>
+
+  </div>
+  <br>
+  <br>
+
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans">
+        COVID-19 Response Timebank
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <h2>COVID-19 Response Timebank</h2>
+    <p>
+      As each neighbor we all have skills and resources to contribute to share with one another. Here is a platform for people to connect with each other and exchange, whether it's delivering food, sending activities for kids to play at home, or making calls to check on seniors.
+    </p>
+    <button class="btn_bottom" onclick="location.href='/dev/post/new'" id="request_btn">Request Help</button>
+    <button class="btn_bottom" onclick="location.href='/dev/offerhelp'" id="offer_btn">Offer Help</button>
+  </section>
+
+{% endblock home %}

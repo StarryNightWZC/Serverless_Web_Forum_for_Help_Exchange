@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='guidestyle.css') }}">
+{% endblock %}
+{% block content %}
+  <section class="section-block">
+      <h2>Food/Necessities</h2>
+      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#fafafa SIZE=1>
+  </section>
+
+  <br>
+   <section class="section-block">
+      <p class="guide-content">
+        Residents in immediate need of food can call 211 for information on
+        food program availability or view a map of local food service providers
+        on the <a href="https://www.211toronto.ca/topic/Central%20Region/ORGANIZATION/fht142/Central%20Region" >211 website.</a>
+      </p>
+  </section>
+  <br>
+  <div class="container">
+      <div >
+          <div class="card">
+              <div class="card-header">
+                  Red Cross
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      Food Delivery for Seniors
+                  </h4>
+                  <p>The City is working with the Red Cross and other partners<br> to provide food hamper delivery to seniors and others<br> in need who are unable to leave their homes.</p>
+                  <p class="card-text">
+                     TEL: <a href="tel: 18332049952 "> 1-833-204-9952</a>
+                  <p>M-F: 8:30 am-5:00 pm</p>
+                  </p>
+
+              </div>
+          </div>
+          <div class="mt-25"></div>
+          <div class="card">
+              <div class="card-header">
+                  Food for Kids
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      Food for kids
+                  </h4>
+                  <p>The City is working with student nutrition program partners <br>
+                    to support the Food for Kids program Opens in new window which <br>
+                    is sending grocery gift cards to families of children in need <br>
+                    who attend school in Toronto and were previously enrolled in <br>
+                    the program. The $50 food card for these children and each of <br>
+                    their siblings represents the approximate value of 30 healthy <br>
+                    breakfasts for each child.
+                  </p>
+                  <br>
+                  <p class="card-text">
+                      <button class="btn" onclick="location.href='https://tfss.ca/'" >Food for kids Program</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+
+      </div>
+  </div>
+
+  </article>
+
+{% endblock content %}

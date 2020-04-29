@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='guidestyle.css') }}">
+{% endblock %}
+{% block content %}
+  <section class="section-block">
+      <h2>Utilities</h2>
+      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#fafafa SIZE=1>
+  </section>
+
+  <br>
+
+  <br>
+  <div class="container">
+      <div >
+          <div class="card">
+              <div class="card-header">
+                  Ontario
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      How-to for flushing housing plumbing
+                  </h4>
+                  <p>If your water was just recently turned back on, here's how to flush your housing plumbing.
+                  </p>
+                  <p class="card-text">
+                     TEL: <a href="tel: 8006629278 "> 800-662-9278</a>
+                  <p class="card-text">
+                      <button class="btnn" onclick="location.href='https://www.michigan.gov/documents/egle/egle-tou-dweh-WaterReconnectionActions_683801_7.pdf'" >Water Reconnection (PDF)</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+
+      </div>
+  </div>
+
+  </article>
+
+{% endblock content %}

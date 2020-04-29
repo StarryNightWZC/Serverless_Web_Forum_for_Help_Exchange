@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='guidestyle.css') }}">
+{% endblock %}
+{% block content %}
+  <section class="section-block">
+      <h2>Seniors</h2>
+      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#fafafa SIZE=1>
+  </section>
+
+  <br>
+
+  <br>
+  <div class="container">
+      <div >
+          <div class="card">
+              <div class="card-header">
+                  Ontario Community Support Association
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      Community Services for Seniors
+                  </h4>
+                  <p>There are many agencies across the City that offer services to seniors living at home.</p>
+                  <p class="card-text">
+                      <button class="btnn" onclick="location.href='http://www.mealsonwheels.ca/'" >Meals on wheels</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+
+      </div>
+  </div>
+
+  </article>
+
+{% endblock content %}

@@ -1,0 +1,165 @@
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.pimg1, .pimg2, .pimg3{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('img/image4.jpg');
+  min-height:100%;
+}
+
+.pimg2{
+  background-image:url('img/image6.jpg');
+  min-height:400px;
+}
+
+.pimg3{
+  background-image:url('img/image8.jpg');
+  min-height:400px;
+}
+
+.image{
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.guide-content{
+  color:#ddd;
+
+}
+
+.section-light{
+  background-color:#fafafa;
+  color:#666;
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border{
+  background-color:#111;
+  color:#fff;
+  padding:20px;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+
+.btn{
+  position:center;
+  text-align:center;
+  width: 200px;
+  height: 50px;
+  background-color: gold;
+  color: #fff;
+  font-weight: bolder;
+  border:2px solid gold;
+}
+
+.btn:hover{
+  color: gold;
+  background-color: #fff;
+}
+
+.btn_bottom:hover{
+  color: gold;
+  background-color: #fff;
+}
+
+.btn_bottom{
+  position:center;
+  margin-left: 2.5em;
+  text-align:center;
+  width: 200px;
+  height: 50px;
+  background-color: gold;
+  color: #fff;
+  font-weight: bolder;
+  border:2px solid gold;
+}
+
+
+.wrapper{
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-rows: 300px;
+
+}
+
+.wrapper > div{
+  background:#fafafa;
+  padding: 2em;
+}
+
+.container-text{
+  color:#666;
+  height: 50px;
+  text-align:center;
+  margin-bottom: 0.5em;
+}
+
+.container-title{
+  color: #111111;
+  font-size: larger;
+  text-align:center;
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+.container-title.hover{
+  color: gold;
+}
+
+.bottom{
+  width: border-box;
+  height: 70px;
+  background: #5f788a;
+}
+
+.ls{
+
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+}

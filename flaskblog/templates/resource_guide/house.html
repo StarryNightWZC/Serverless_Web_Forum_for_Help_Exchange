@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='guidestyle.css') }}">
+{% endblock %}
+{% block content %}
+  <section class="section-block">
+      <h2>Housing and Shelter</h2>
+      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#fafafa SIZE=1>
+  </section>
+
+  <br>
+
+  <br>
+  <div class="container">
+      <div >
+          <div class="card">
+              <div class="card-header">
+                  City of Toronto
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      Financial Support for Renters
+                  </h4>
+                  <p>The City is working on enhancing and expanding financial supports to help tenants maintain their homes.</p>
+                  <p class="card-text">
+                      <button class="btnn" onclick="location.href='https://www.toronto.ca/community-people/employment-social-support/housing-support/financial-support-for-renters/'" >Financial Support </button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+
+      </div>
+  </div>
+
+  </article>
+
+{% endblock content %}

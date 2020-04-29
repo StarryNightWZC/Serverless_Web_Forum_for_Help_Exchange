@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="mb-3">Posts by {{ username }} ({{ length }})</h1>
+    {% for post in posts %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ user_table.get_user_imagefile(post.username)}}">
+          <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{{ url_for('users.user_posts', username=post.username) }}">{{ post.username }}</a>
+                <small class="text-muted">{{ post.timestamp }}</small>
+                <small class="col-sm-10 text-muted">  {{ post.type }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.post_id) }}">{{ post.title }}</a></h2>
+              <small class="text-muted">Request help from {{ post.sdate }}</small>
+              <small class="text-muted">to {{ post.fdate }}</small><br>
+            <small class="text-muted">Phone Number:{{ post.phone }}</small><br>
+            <small class="text-muted">Email:{{ post.email}}</small>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

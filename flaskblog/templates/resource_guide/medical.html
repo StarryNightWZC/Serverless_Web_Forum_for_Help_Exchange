@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='guidestyle.css') }}">
+{% endblock %}
+{% block content %}
+  <section class="section-block">
+      <h2>Health Resources</h2>
+      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#fafafa SIZE=1>
+  </section>
+
+  <br>
+  <section class="section-block">
+      <h3>What should you do if you have COVID-19 symptoms?</h3>
+      <p class="guide-content">If you think you have COVID-19 symptoms or have been in close contact with someone who has it,
+          <a href="https://www.toronto.ca/home/covid-19/covid-19-health-advice/covid-19-assessment-centres/">find out if you should visit an assessment centre </a>and where the nearest location is.<br>
+          If you’re having difficulty breathing or experiencing other severe symptoms, call 911.<br>
+          If you have been tested for COVID-19, you can now <a href="https://covid-19.ontario.ca/">access your lab results online Opens in new window.</a><br>
+          Source: <a href="https://www.toronto.ca/">City of Toronto</a>
+      </p>
+  </section>
+  <br>
+  <div class="container">
+      <div >
+          <div class="card">
+              <div class="card-header">
+                  Your Healthcare Provider
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      COVID-19 Hotline
+                  </h4>
+                  <p>Contact Telehealth Ontario if you’re experiencing <br>symptoms of the 2019 novel coronavirus.</p>
+                  <p class="card-text">
+                      TEL:<a href="tel: 18667970000 "> 1-866-797-0000</a>
+                  <p>M-F: 8:30 am-5:00 pm</p>
+                  </p>
+                  <p class="card-text">
+                      <button class="btnn" onclick="location.href='https://www.toronto.ca/home/covid-19/'" >Toronto Coronavirus Info</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+          <div class="card">
+              <div class="card-header">
+                  Ontario Health and Wellness
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      On-Site COVID-19 Self-Assessment
+                  </h4>
+                  <p>Find your on-site testing health center.</p>
+                  <br>
+                  <p class="card-text">
+                      <button class="btn" onclick="location.href='https://covid-19.ontario.ca/self-assessment/#q0'" >Start self-assessment</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+          <div class="card">
+              <div class="card-header">
+                  City of Toronto
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">
+                      COVID-19: Health Advice
+                  </h4>
+                  <p>Take these steps to keep yourself and <br>the community healthy.</p>
+                  <br>
+                  <p class="card-text">
+                      <button class="btnn" onclick="location.href='https://www.toronto.ca/home/covid-19/covid-19-health-advice/'" >Health Advice</button>
+                  </p>
+              </div>
+          </div>
+          <div class="mt-25"></div>
+      </div>
+  </div>
+
+  </article>
+
+{% endblock content %}
